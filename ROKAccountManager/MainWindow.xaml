@@ -1,0 +1,56 @@
+﻿<Window x:Class="ROKAccountManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ROKAccountManager"
+        mc:Ignorable="d"
+        Title="ROK Account Manager" 
+        SizeToContent="WidthAndHeight"
+        Height="Auto"
+        Width="Auto" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        Icon="pack://application:,,,/Resources/logo_pc1.png"
+        >
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Image Grid.Row="0" Source="pack://application:,,,/Resources/logo_pc1.png" Height="200"/>
+        <ListView 
+            Grid.Row="1" 
+            HorizontalAlignment="Center"
+            Margin="10" 
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            VerticalContentAlignment="Top"
+            HorizontalContentAlignment="Center"
+            MaxHeight="200"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Name="_accounts"
+            
+            >
+        </ListView>
+        <Button Grid.Row="2" Content="SAVE" FontSize="22" FontWeight="Bold" Margin="5" Height="45" Width="250" Click="Account_Save" FontFamily="Comic Sans MS"/>
+        <TextBlock 
+            Grid.Row="3" 
+            Background="Transparent"
+            Text="Bashar Bachir admin@struct.de" 
+            Foreground="WhiteSmoke" 
+            TextDecorations="Underline" 
+            HorizontalAlignment="Center"
+            MouseDown="Contact_Click"
+            Cursor="Help"
+        />
+    </Grid>
+</Window>
